@@ -1,0 +1,42 @@
+<div class="row">
+  <h1>All our flats</h1>
+</div>
+
+<div class="row">
+  <p>All <%= @flats.count %> flats</p>
+</div>
+
+<div class="row">
+  <div class="d-flex justify-content-around">
+    <div class="flat-card">
+      <% @flats.each do |flat| %>
+      <h2>
+        <%= flat.name %>
+      </h2>
+      <p>
+      <%= flat.address %>
+      </p>
+      <div class="d-flex justify-content-around">
+        <p>
+          R$ <%= flat.price_per_night %>
+        </p>
+        <p>
+          <%= flat.number_of_guestes %>
+        </p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <p>
+          <%= link_to 'More info', flat_path(flat) %>
+        </p>
+        <p>
+          <%= link_to 'Edit', edit_flat_path(flat) %>
+        </p>
+        <p>
+          <%= link_to 'Remove', flat_path(flat), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

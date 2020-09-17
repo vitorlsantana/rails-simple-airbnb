@@ -9,7 +9,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="container">
+    <div>
+      <nav class="d-flex justify-content-between">
+        <div>
+          <%= link_to 'Simple Airbnb', flats_path%>
+        </div>
+        <div>
+          <%= link_to 'Add a flat', new_flat_path, class: "btn btn-primary"%>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,31 @@
+<div class="d-flex">
+  <div>
+    <div>
+      <h1><strong><%= @flat.name %></strong></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div>
+      <h2>A little more about this flat...</h2>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <h2>Book this place</h2>
+    </div>
+    <div>
+      <h2>Details</h2>
+    </div>
+    <div>
+      R$ <%= @flat.price_per_night %>
+      <%= @flat.number_of_guestes %>
+    </div>
+    <div>
+      <footer>
+        <h3>Share</h3>
+      </footer>
+    </div>
+  </div>
+
+</div>
